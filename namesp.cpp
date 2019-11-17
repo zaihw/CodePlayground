@@ -27,7 +27,7 @@ namespace debts{
         showPerson(rd.name);
         std::cout<<": $"<<rd.amount<<std::endl;
     }
-    double sumDEbts(const Debt ar[], int n){
+    double sumDebts(const Debt ar[], int n){
         double total=0;
         for(int i=0; i<n; i++)
             total += ar[i].amount;
