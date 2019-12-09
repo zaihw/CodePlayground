@@ -1,11 +1,10 @@
-# 1 "/home/zw/Documents/CodePlayground/lotto.cpp"
+# 1 "/home/zw/Documents/CodePlayground/initialize2DArray.cpp"
 # 1 "/bin//"
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "/usr/include/stdc-predef.h" 1 3 4
 # 1 "<command-line>" 2
-# 1 "/home/zw/Documents/CodePlayground/lotto.cpp"
-
+# 1 "/home/zw/Documents/CodePlayground/initialize2DArray.cpp"
 
 # 1 "/usr/include/c++/9/iostream" 1 3
 # 36 "/usr/include/c++/9/iostream" 3
@@ -28552,39 +28551,35 @@ namespace std __attribute__ ((__visibility__ ("default")))
 
 
 }
-# 4 "/home/zw/Documents/CodePlayground/lotto.cpp" 2
+# 3 "/home/zw/Documents/CodePlayground/initialize2DArray.cpp" 2
 
-# 4 "/home/zw/Documents/CodePlayground/lotto.cpp"
-long double probablity(unsigned numbers, unsigned picks);
+# 3 "/home/zw/Documents/CodePlayground/initialize2DArray.cpp"
+using namespace std;
 
 int main()
 {
-    using namespace std;
-    double total, choices;
-    cout<<"enter the total number of choices on the game card \n"
-            "and the number of picks allowed: \n";
-    while((cin>>total>>choices)&&(choices<=total))
+    int a[2][3]={{1,2,3},{4,5,6}};
+    int b[3][2], i, j;
+    cout<<"array a: "<<endl;
+    for(i=0; i<=1; i++)
     {
-        cout<<"you have one chance in ";
-        cout<<probablity(total, choices);
-        cout<<" of winning.\n";
-        cout<<"next two numbers (q to quit): ";
+        for(j=0; j<=2; j++)
+        {
+            cout<<a[i][j]<<" ";
+            b[j][i]=a[i][j];
+        }
+        cout<<endl;
     }
-    cout<<"bye\n";
+    cout<<"array b: "<<endl;
+
+    for(i=0; i<=2; i++)
+    {
+        for(j=0; j<=2; j++)
+        {
+            cout<<b[i][j]<<" ";
+            cout<<endl;
+        }
+    }
     return 0;
-}
 
-
-
-long double probablity(unsigned number, unsigned picks)
-{
-    long double result = 1.0;
-    long double n;
-    unsigned p;
-
-    for (n, p; p>0; n--,p--)
-    {
-        result=result*n/p;
-    }
-    return result;
 }
