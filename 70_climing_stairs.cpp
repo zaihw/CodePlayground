@@ -1,15 +1,16 @@
 class Solution {
 public:
     int climbStairs(int n) {
-        int a[n];
-        a[0]=1;
-        a[1]=2;
-        
-        for (int i=2; i<n; ++i)
-        {
-            a[i]=a[i-1]+a[i-2];
-        }
-        
-        return a[n-1];
+    int n1=1, n2=2;
+    if(n==1)    return n1;
+    if(n==2)    return n2;
+    
+    for(int i=3; i<=n; ++i)
+    {
+        int tmp = n2;
+        n2 = n1 + n2;
+        n1 = tmp;
+    }
+    return n2;
     }
 };
