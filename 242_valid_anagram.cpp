@@ -7,7 +7,7 @@ public:
         for (auto item : s){
             letters[item - 'a']++;
         }
-        for (auto item : s){
+        for (auto item : t){
             letters[item - 'a']--;
         }
         for (auto letter : letters){
