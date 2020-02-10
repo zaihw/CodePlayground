@@ -15,7 +15,7 @@ public:
     bool isPowerOfThree(int n) {
         static unordered_map<int, bool> power;
         if(power.size()==0) init(power);
-        //check if value 'n' presents in map 'power' by compare iterator woth power.end()
+        //check if value 'n' presents in map 'power' by compare iterator with power.end()
         return power.find(n) != power.end();
     }
 };
