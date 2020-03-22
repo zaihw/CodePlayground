@@ -25,7 +25,6 @@ public:
                 r_sum-=nums[i+1];
                 i++;
             }
-            
         }
         //check the missing last position
         if (l_sum==0)   return nums.size()-1;
